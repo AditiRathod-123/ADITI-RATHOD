@@ -1,0 +1,14 @@
+FAKE NEWS DETECTION USING MACHINE LEARNING
+Main language: Python
+ML type: Supervised Learning (text classification)
+NLP method: TF-IDF (unigrams + bigrams)
+Algorithm: Logistic Regression
+Backend: Flask
+Frontend: HTML, CSS, JavaScript
+Dataset: small illustrative CSV with REAL and FAKE labels
+
+Start: run run_project.bat on Windows.
+Then open http://127.0.0.1:5000
+
+Important: This is an educational demonstration. The sample dataset is small and illustrative.
+Predictions are not proof of truth or falsity. Verify claims with trusted sources.

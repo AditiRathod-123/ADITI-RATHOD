@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verity AI | Fake News Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">V</span><span>verity<span class="brand-ai">.ai</span></span></a>
+    <div class="top-tag"><span class="pulse"></span> NLP CLASSIFIER</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> MACHINE LEARNING PROJECT</div>
+      <h1>Pause. Check.<br><span>Think clearly.</span></h1>
+      <p class="hero-copy">Explore how Natural Language Processing and Machine Learning can identify patterns in news text.</p>
+      <div class="hero-pills"><span>PYTHON</span><span>TF-IDF</span><span>LOGISTIC REGRESSION</span></div>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><div class="step-label">01 / ANALYSE TEXT</div><h2>What's the story?</h2></div>
+        <div class="live-label"><span class="live-dot"></span> MODEL READY</div>
+      </div>
+      <p class="section-copy">Paste a headline or a short news passage below. The model will compare its language patterns with its training examples.</p>
+      <div class="input-wrap">
+        <textarea id="newsText" maxlength="10000" placeholder="Paste a news headline or article excerpt here..." aria-label="News text"></textarea>
+        <div class="input-footer"><span id="charCount">0 / 10,000 characters</span><button class="clear-btn" id="clearBtn" type="button">Clear text <span>↗</span></button></div>
+      </div>
+      <div class="sample-row"><span class="sample-label">TRY A SAMPLE</span><button class="sample-btn" data-sample="real">Real-style example</button><button class="sample-btn" data-sample="fake">Fake-style example</button></div>
+      <button class="analyse-btn" id="analyseBtn"><span>Analyse news text</span><span class="btn-arrow">↗</span></button>
+      <div class="error-box" id="errorBox" role="alert"></div>
+
+      <section class="result-panel" id="resultPanel" aria-live="polite">
+        <div class="result-top"><div class="step-label">02 / MODEL OUTPUT</div><span class="result-chip">ANALYSIS COMPLETE</span></div>
+        <div class="result-main"><div><div class="result-kicker">PREDICTED CLASS</div><h3 id="predictionText">—</h3></div><div class="score-ring" id="scoreRing"><div><strong id="confidenceText">—</strong><small>MODEL SCORE</small></div></div></div>
+        <p class="result-message" id="resultMessage"></p>
+        <div class="disclaimer" id="disclaimer"></div>
+      </section>
+    </section>
+
+    <section class="how-section">
+      <div class="step-label">THE PROCESS</div><h2>From words to patterns.</h2>
+      <div class="process-grid">
+        <article class="process-card"><span class="process-number">01</span><div class="process-icon">Aa</div><h3>Text input</h3><p>A news passage is submitted for analysis.</p></article>
+        <article class="process-card"><span class="process-number">02</span><div class="process-icon">▦</div><h3>TF-IDF</h3><p>Text is transformed into numerical features.</p></article>
+        <article class="process-card"><span class="process-number">03</span><div class="process-icon">⌁</div><h3>ML model</h3><p>Logistic Regression predicts a learned label.</p></article>
+        <article class="process-card"><span class="process-number">04</span><div class="process-icon">↗</div><h3>Result</h3><p>The predicted class and model score appear.</p></article>
+      </div>
+    </section>
+    <footer><span>VERITY.AI · EDUCATIONAL DEMO</span><span>Built with Python + Scikit-learn</span></footer>
+    <p class="footnote">Important: This tool is not a fact-checking service. A model prediction can be wrong. Check the original source and consult multiple reliable news organisations or fact-checkers before sharing a claim.</p>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
